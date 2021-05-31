@@ -2,7 +2,7 @@ buildscript {
     apply from: 'properties.gradle'
 
     repositories {
-        maven { url 'https://repo.spring.io/release' }
+        maven mavenRepoConfig
         mavenCentral()
     }
 
@@ -26,7 +26,7 @@ subprojects {
     targetCompatibility = 11
 
     repositories {
-        maven { url 'https://repo.spring.io/release' }
+        maven mavenRepoConfig
         mavenCentral()
     }
 
@@ -36,9 +36,5 @@ subprojects {
 
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
-    }
-
-    test {
-        useJUnitPlatform()
     }
 }

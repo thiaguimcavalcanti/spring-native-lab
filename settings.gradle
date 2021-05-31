@@ -1,9 +1,2 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal() // this needs to be added as well, otherwise other dependencies don't resolve
-        maven { url 'https://repo.spring.io/release' }
-    }
-}
-
 rootProject.name = 'spring-native-lab'
 include('standard-microservice', 'spring-native-microservice')
