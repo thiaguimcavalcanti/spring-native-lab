@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.experimental.aot'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+}
+
+bootBuildImage {
+    builder = 'paketobuildpacks/builder:tiny'
+    environment = ['BP_NATIVE_IMAGE': 'true']
+}
