@@ -45,6 +45,29 @@ $ curl localhost:8080/getName --silent
 Ragnar Lothbrok (Vikings)
 ````
 
+## Warnings that I noticed during the spring-native-microservice build
+
+1.
+````
+...
+Task :spring-native-microservice:generateAot
+Failed verification check: this type was requested to be added to configuration but is not resolvable: org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor it will be skipped
+Failed verification check: this type was requested to be added to configuration but is not resolvable: org.springframework.messaging.handler.annotation.MessageMapping it will be skipped
+Failed verification check: this type was requested to be added to configuration but is not resolvable: org.springframework.transaction.annotation.Transactional it will be skipped
+Failed verification check: this type was requested to be added to configuration but is not resolvable: javax.transaction.Transactional it will be skipped
+Failed verification check: this type was requested to be added to configuration but is not resolvable: org.springframework.transaction.annotation.Propagation it will be skipped
+...
+````
+
+2.
+````
+...
+Task :spring-native-microservice:compileAotTestJava
+warning: unknown enum constant When.MAYBE
+  reason: class file for javax.annotation.meta.When not found
+...
+````
+
 ##  Reference Documentation
 
 For further reference, please consider the following sections:

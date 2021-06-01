@@ -57,8 +57,17 @@ It was pretty straightforward. To perform the startup time test, I ran both subp
   <img width="800" src="https://github.com/thiaguimcavalcanti/spring-native-lab/blob/main/screenshots/spring-native-microservice - buildDockerImage time.png"/>
   
 
-- And the startup time is unbelievable **0.171 seconds** \o/   
+- And the startup time was unbelievable **0.171 seconds** \o/   
   <img width="800" src="https://github.com/thiaguimcavalcanti/spring-native-lab/blob/main/screenshots/spring-native-microservice - startup time.gif"/>
   
 ### Final comment
 - The startup time of the microservice project using Spring Native running on Native Image was **~17x faster** than a standard microservice project running on HotSpot JVM.
+
+## My thoughts
+
+The Spring team is doing a great job related to Spring Native. 
+
+This plugin came to compete with Micronaut and Quarkus, but I believe that the Spring team has a lot of work to do to release a version more trustful. 
+I say that because in this simple POC, I faced many warnings and errors during the docker image build (maybe I forgot to set up something). 
+
+Anyways, congratulations Spring team!!!!! I'm impressed with the results and looking forward to testing new releases. \o/
