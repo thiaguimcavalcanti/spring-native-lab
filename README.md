@@ -45,13 +45,13 @@ It was pretty straightforward. To perform the startup time test, I ran both subp
 
 ## Results
 
-### 1. standard-microservice
+### standard-microservice
 
 - Build time: ~7 seconds
-- Start time: **~3 seconds**    
+- Start time: **~3 seconds** (too much time)    
   <img width="800" src="https://github.com/thiaguimcavalcanti/spring-native-lab/blob/main/screenshots/standard-microservice - startup time.gif"/>
 
-### 2. spring-native-microservice
+### spring-native-microservice
 
 - The ````$ gradle bootBuildImage```` command takes **~10 minutes** to build a new Docker image   
   <img width="800" src="https://github.com/thiaguimcavalcanti/spring-native-lab/blob/main/screenshots/spring-native-microservice - buildDockerImage time.png"/>
@@ -59,3 +59,6 @@ It was pretty straightforward. To perform the startup time test, I ran both subp
 
 - And the startup time is unbelievable **0.171 seconds** \o/   
   <img width="800" src="https://github.com/thiaguimcavalcanti/spring-native-lab/blob/main/screenshots/spring-native-microservice - startup time.gif"/>
+  
+### Final comment
+- The startup time of the microservice project using Spring Native running on Native Image was **~17x faster** than a standard microservice project running on HotSpot JVM.
